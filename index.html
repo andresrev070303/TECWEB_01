@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom CSS para centrar el título de la sección "HABILIDADES" */
+    #skills h2 {
+      text-align: center;
+    }
+    /* Custom CSS para limitar el ancho de las imágenes de habilidades */
+    .skill-img {
+      max-width: 180px;
+    }
+    /* Custom CSS para centrar verticalmente el contenido de las columnas derechas */
+    .vertical-center {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Mi Portafolio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Acerca de Mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Resumen de Habilidades</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portafolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ACERCA Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="vertical-center">
+            <h2>Andres Revollo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu est auctor, finibus elit in, ultricies ipsum. Suspendisse sed tristique nunc. Integer consectetur tortor ac ipsum venenatis, nec ullamcorper nisl finibus. Maecenas tristique interdum sem, vitae gravida magna efficitur at. Mauris tempor lectus id ex lacinia tincidunt. In vel ultrices lacus. Ut scelerisque massa a nisi interdum, id lacinia odio bibendum.</p>
+            <!-- Agregar más texto Lorem Ipsum si es necesario para alcanzar las 130 palabras -->
+          </div>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="andres.jpg" class="img-fluid" alt="Andres Revollo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES Section -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2>HABILIDADES</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="text-center">
+            <img src="habilidad1.png" class="skill-img img-fluid" alt="CSS">
+            <h3>CSS</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal1">VER</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="vertical-center">
+            <h3>HTML</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal2">VER</button>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="vertical-center">
+            <h3>JAVASCRIPT</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal3">VER</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-center">
+            <img src="habilidad2.png" class="skill-img img-fluid" alt="HTML">
+            <h3>HTML</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal4">VER</button>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="text-center">
+            <img src="habilidad3.png" class="skill-img img-fluid" alt="JAVASCRIPT">
+            <h3>JAVASCRIPT</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal5">VER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Modal HTML -->
+  <div id="modal1" class="modal fade" tabindex="-
