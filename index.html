@@ -5,127 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
   <style>
-    /* Custom CSS para centrar el título de la sección "HABILIDADES" */
-    #skills h2 {
+    .about-section {
+      padding: 50px 0;
+    }
+    .about-content {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .about-image {
       text-align: center;
     }
-    /* Custom CSS para limitar el ancho de las imágenes de habilidades */
-    .skill-img {
-      max-width: 180px;
+    .about-image img {
+      max-width: 200px;
+      height: auto;
     }
-    /* Custom CSS para centrar verticalmente el contenido de las columnas derechas */
-    .vertical-center {
+    .skills-section {
+      padding: 50px 0;
+      text-align: center;
+    }
+    .skill-title {
+      margin-bottom: 15px;
+    }
+    .skill-description {
+      text-align: left;
+    }
+    .skill-img {
+      max-width: 150px;
+      margin: 0 auto 15px; 
+    }
+    .skill-item {
       display: flex;
-      align-items: center;
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    .skill-details {
+      flex-grow: 1; 
+      margin-left: 20px; 
     }
   </style>
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Mi Portafolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">Acerca de Mí</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Resumen de Habilidades</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portafolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Servicios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contacto</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mi Portafolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Acerca de mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Resumen de habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portafolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contacto</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- ACERCA Section -->
-  <section id="about" class="py-5">
+  <!-- About Section -->
+  <section id="about" class="about-section">
     <div class="container">
       <div class="row">
+        <!-- Columna izquierda -->
         <div class="col-md-6">
-          <div class="vertical-center">
-            <h2>Andres Revollo</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu est auctor, finibus elit in, ultricies ipsum. Suspendisse sed tristique nunc. Integer consectetur tortor ac ipsum venenatis, nec ullamcorper nisl finibus. Maecenas tristique interdum sem, vitae gravida magna efficitur at. Mauris tempor lectus id ex lacinia tincidunt. In vel ultrices lacus. Ut scelerisque massa a nisi interdum, id lacinia odio bibendum.</p>
-            <!-- Agregar más texto Lorem Ipsum si es necesario para alcanzar las 130 palabras -->
+          <div class="about-content">
+            <h2>Andres Revollo Almendras</h2>
+            <p>Estudiante de ing. en sistemas, edad de 21 años hasta la fecha, apasionado del deporte tanto como el voleyball, futbol. Apasionado de la musica, vocalista en distintos grupos, religiosos, paganos. Responsable en la mayoria de los casos, trabajor.
+            </p>
+            
           </div>
         </div>
-        <div class="col-md-6 text-center">
-          <img src="andres.jpg" class="img-fluid" alt="Andres Revollo">
+        <!-- Columna derecha -->
+        <div class="col-md-6">
+          <div class="about-image">
+            <img src="andres.jpg" alt="Mi foto">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HABILIDADES Section -->
-  <section id="skills" class="py-5">
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
     <div class="container">
-      <h2>HABILIDADES</h2>
-      <div class="row mt-4">
+      <h2 class="skill-title">Habilidades</h2>
+      <div class="row">
+        <!-- Primera fila -->
         <div class="col-md-6">
-          <div class="text-center">
-            <img src="habilidad1.png" class="skill-img img-fluid" alt="CSS">
-            <h3>CSS</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modal1">VER</button>
+          <div class="skill-item">
+            <img src="habilidad1.png" alt="Habilidad 1" class="skill-img">
+            <div class="skill-details">
+              <h3>CSS</h3>
+              <p class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget eros ac metus accumsan placerat.</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#cssModal">Ver</button>
+            </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="vertical-center">
-            <h3>HTML</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modal2">VER</button>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-6">
-          <div class="vertical-center">
-            <h3>JAVASCRIPT</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modal3">VER</button>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="text-center">
-            <img src="habilidad2.png" class="skill-img img-fluid" alt="HTML">
-            <h3>HTML</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modal4">VER</button>
+          <div class="skill-item">
+            <img src="hmtl.png" alt="Habilidad 2" class="skill-img">
+            <div class="skill-details">
+              <h3>HTML</h3>
+              <p class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget eros ac metus accumsan placerat.</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#htmlModal">Ver</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row mt-4">
+      <div class="row" style="margin-top: 15px;">
+        <!-- Segunda fila -->
         <div class="col-md-6">
-          <div class="text-center">
-            <img src="habilidad3.png" class="skill-img img-fluid" alt="JAVASCRIPT">
-            <h3>JAVASCRIPT</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices tellus non purus eleifend, at sagittis nisi iaculis.</p>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modal5">VER</button>
+          <div class="skill-item">
+            <img src="habilidad3.png" alt="Habilidad 3" class="skill-img">
+            <div class="skill-details">
+              <h3>JAVASCRIPT</h3>
+              <p class="skill-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget eros ac metus accumsan placerat.</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#jsModal">Ver</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bootstrap JS and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Modal CSS -->
+  <div class="modal fade" id="cssModal" tabindex="-1" role="dialog" aria-labelledby="cssModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cssModalLabel">Habilidad CSS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Programando en css desde 2023
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Modal HTML -->
-  <div id="modal1" class="modal fade" tabindex="-
+  <div class="modal fade" id="htmlModal" tabindex="-1" role="dialog" aria-labelledby="htmlModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="htmlModalLabel">Habilidad HTML</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Programando en html desde 2023
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal JavaScript -->
+  <div class="modal fade" id="jsModal" tabindex="-1" role="dialog" aria-labelledby="jsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="jsModalLabel">Habilidad JavaScript</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Programando en JavaScript desde 2023
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
